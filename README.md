@@ -2,4 +2,4 @@
 
 js chrome app
 
-URL:
+URL: https://rokdam-developer.github.io/js-chrome-app/
