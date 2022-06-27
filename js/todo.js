@@ -15,12 +15,21 @@ function deleteToDo(event) {
   saveToDo();
 }
 
+function CheckBoxToDo(event) {
+  const checkBox = event.target.parentElement;
+  const onOff = checkBox.classList.toggle("checkOnOff");
+}
+
 function paintToDo(newToDo) {
   const li = document.createElement("li");
   li.id = newToDo.id; // li태그 속 id 생성
   toDoList.appendChild(li);
+  const checkBox = document.createElement("input");
+  checkBox.type = "checkbox";
+  checkBox.addEventListener("click", CheckBoxToDo);
   const span = document.createElement("span");
   const btn = document.createElement("button");
+  li.appendChild(checkBox);
   li.appendChild(span);
   li.appendChild(btn);
   span.innerText = newToDo.text;
